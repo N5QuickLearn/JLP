@@ -1,93 +1,54 @@
+<!-- Update index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nihongo Master - Learn Japanese</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Add gradient background and better typography -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+    </style>
 </head>
 <body>
     <header>
         <nav>
             <div class="logo">
                 <img src="images/logo.png" alt="Nihongo Master">
+                <span>日本語マスター</span>
             </div>
-            <div class="nav-items">
-                <a href="#home">Home</a>
-                <a href="#lessons">Lessons</a>
-                <a href="#practice">Practice</a>
-                <a href="#progress">Progress</a>
+            <!-- Add user progress -->
+            <div class="user-status">
+                <div class="xp-bar">
+                    <div class="xp-progress" style="width: 45%"></div>
+                </div>
+                <span>450 XP</span>
+                <i class="fas fa-user-circle"></i>
             </div>
         </nav>
     </header>
 
-    <main>
-        <section class="hero" id="home">
-            <div class="hero-content">
-                <h1>Learn Japanese Fast and Fun</h1>
-                <p>Start your journey to master Japanese with interactive lessons!</p>
-                <button class="cta">Begin Learning</button>
-            </div>
-        </section>
-
-        <section class="lesson-cards" id="lessons">
-            <h2>Start Learning</h2>
-            <div class="cards-container">
-                <div class="card">
-                    <h3>Basics</h3>
-                    <p>Learn essential phrases</p>
-                    <div class="progress-bar"></div>
+    <!-- Updated hero section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Discover the Beauty of Japanese</h1>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <i class="fas fa-book-open"></i>
+                    <span>15 Lessons</span>
                 </div>
-                <div class="card">
-                    <h3>Hiragana</h3>
-                    <p>Master basic characters</p>
-                    <div class="progress-bar"></div>
-                </div>
-                <div class="card">
-                    <h3>Katakana</h3>
-                    <p>Learn foreign words script</p>
-                    <div class="progress-bar"></div>
+                <div class="stat-item">
+                    <i class="fas fa-microphone-alt"></i>
+                    <span>Speech Practice</span>
                 </div>
             </div>
-        </section>
+            <button class="cta pulse">
+                Start Learning <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+    </section>
 
-        <section class="practice-section" id="practice">
-            <div class="flashcard">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">
-                        <h4>Translate this</h4>
-                        <p class="question">Hello</p>
-                    </div>
-                    <div class="flashcard-back">
-                        <p class="answer">こんにちは</p>
-                        <p class="pronunciation">Konnichiwa</p>
-                    </div>
-                </div>
-            </div>
-            <div class="controls">
-                <button class="prev">← Previous</button>
-                <button class="next">Next →</button>
-            </div>
-        </section>
-
-        <section class="quiz-section">
-            <h2>Quick Quiz</h2>
-            <div class="quiz-container">
-                <p class="quiz-question">What does 「ありがとう」 mean?</p>
-                <div class="quiz-options">
-                    <button class="option">Thank you</button>
-                    <button class="option">Good morning</button>
-                    <button class="option">Goodbye</button>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2023 Nihongo Master. All rights reserved.</p>
-    </footer>
-
-    <script src="script.js"></script>
+    <!-- Add loading animation -->
+    <div class="loader">
+        <div class="loading-text">Loading...</div>
+        <div class="loading-bar"></div>
+    </div>
 </body>
-          </html>
+</html>
