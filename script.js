@@ -1,35 +1,34 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // Flashcard functionality
-    const flashcards = document.querySelectorAll('.flashcard');
-    
-    flashcards.forEach(flashcard => {
-        flashcard.addEventListener('click', () => {
-            flashcard.querySelector('.flashcard-inner').classList.toggle('flipped');
-        });
-    });
+// Update script.js
+// Add smooth page transitions
+window.addEventListener('load', () => {
+    document.body.classList.add('loaded');
+});
 
-    // Quiz functionality
-    const options = document.querySelectorAll('.option');
-    
-    options.forEach(option => {
-        option.addEventListener('click', (e) => {
-            if (e.target.textContent === 'Thank you') {
-                e.target.style.backgroundColor = '#4CAF50';
-                e.target.style.color = 'white';
+// Add progress loader
+window.addEventListener('DOMContentLoaded', () => {
+    const loader = document.querySelector('.loading-bar');
+    const simulateLoading = () => {
+        let width = 0;
+        const interval = setInterval(() => {
+            if (width >= 100) {
+                clearInterval(interval);
+                document.querySelector('.loader').style.display = 'none';
             } else {
-                e.target.style.backgroundColor = '#ff4444';
-                e.target.style.color = 'white';
+                width += 10;
+                loader.style.width = width + '%';
             }
-        });
-    });
+        }, 100);
+    };
+    simulateLoading();
+});
 
-    // Navigation scroll
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
+// Add card hover effect
+document.querySelectorAll('.card').forEach(card => {
+    card.addEventListener('mouseenter', () => {
+        card.style.boxShadow = '0 8px 16px rgba(0,0,0,0.1)';
+    });
+    
+    card.addEventListener('mouseleave', () => {
+        card.style.boxShadow = '0 2px 4px rgba(0,0,0,0.1)';
     });
 });
